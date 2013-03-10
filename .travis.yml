@@ -8,6 +8,6 @@ env:
   - DJANGO=1.5
 install:
   - pip install -q Django==$DJANGO --use-mirrors
-  - pip install -q -e . --use-mirrors
+#  - pip install -q -e . --use-mirrors
 script:
   - python -c "print 'No tests yet, but sure there will be some';"
