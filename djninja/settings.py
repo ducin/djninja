@@ -115,7 +115,6 @@ PROJECT_DIR = os.path.dirname(__file__)
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, "templates")
 )
-print TEMPLATE_DIRS
 
 INSTALLED_APPS = (
     'django.contrib.auth',
