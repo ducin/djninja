@@ -1,7 +1,5 @@
 import os.path
 
-# Django settings for djninja project.
-
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -106,10 +104,10 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'djninja.urls'
+ROOT_URLCONF = 'website.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'djninja.wsgi.application'
+WSGI_APPLICATION = 'website.wsgi.application'
 
 PROJECT_DIR = os.path.dirname(__file__)
 TEMPLATE_DIRS = (
