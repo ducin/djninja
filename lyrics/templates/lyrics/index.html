@@ -1,0 +1,9 @@
+{% if songs %}
+    <ul>
+    {% for lyric in songs %}
+        <li><a href="/lyrics/{{ lyric.id }}/">{{ lyric.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No songs are available.</p>
+{% endif %}
