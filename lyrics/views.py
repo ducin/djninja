@@ -10,7 +10,7 @@ def index(request):
     })
     return HttpResponse(template.render(context))
 
-def index(request, song_id):
+def song(request, song_id):
     template = loader.get_template('lyrics/song.html')
     context = Context({
         'song': Lyric.objects.get(id=song_id)
