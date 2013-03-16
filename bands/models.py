@@ -36,7 +36,7 @@ class Album(models.Model):
     name = models.CharField(max_length=64)
     released_at = models.DateField()
     def __unicode__(self):
-        return self.name
+        return "\"" + self.name + "\" by " + self.band.name + " (" + unicode(self.released_at) + ")"
 
 class Song(models.Model):
     """Song from a music album"""

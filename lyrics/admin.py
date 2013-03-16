@@ -1,5 +1,5 @@
 from django.contrib import admin
-from lyrics.models import Genre, Lyric, LyricComment
+from lyrics.models import Lyric, LyricComment
 
 class LyricInline(admin.StackedInline):
     model = Lyric
@@ -23,12 +23,5 @@ class LyricAdmin(admin.ModelAdmin):
     ]
     inlines = [LyricCommentInline]
     
-
-class GenreAdmin(admin.ModelAdmin):
-    list_display = ['name']
-    fields = ['name']
-    inlines = [LyricInline]
-
-admin.site.register(Genre, GenreAdmin)
 admin.site.register(Lyric, LyricAdmin)
 admin.site.register(LyricComment)
