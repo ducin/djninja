@@ -1,18 +1,18 @@
-from django.http import HttpResponse
-from django.template import Context, loader
-
+from django.shortcuts import render, get_object_or_404
 from lyrics.models import Lyric
 
 def index(request):
-    template = loader.get_template('lyrics/index.html')
-    context = Context({
-        'songs': Lyric.objects.order_by('-created_at')[:5]
-    })
-    return HttpResponse(template.render(context))
+    return render(request, 'lyrics/index.html', {})
+
+def jukebox(request):
+    songs = Lyric.objects.order_by('-created_at')[:5]
+    context = { 'songs': songs }
+    return render(request, 'lyrics/jukebox.html', context)
 
 def song(request, song_id):
-    template = loader.get_template('lyrics/song.html')
-    context = Context({
-        'song': Lyric.objects.get(id=song_id)
-    })
-    return HttpResponse(template.render(context))
+    song = get_object_or_404(Lyric, pk=song_id)
+    context = { 'song': song }
+    return render(request, 'lyrics/song.html', context)
+
+def static_about(request):
+    return render(request, 'lyrics/static_about.html', {})

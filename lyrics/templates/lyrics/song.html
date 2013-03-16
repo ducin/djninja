@@ -1,4 +1,10 @@
-<h1>{{ song.title }}</h1>
-<h2>by {{ song.author }} from album {{ song.album }}</h2>
+{% extends "container.html" %}
 
-<pre>{{ song.lyric_text }}</pre>
+{% block title %}Djninja: {{ song.title }} by {{ song.author }}{% endblock %}
+
+{% block container %}
+    <h1>{{ song.title }}</h1>
+    <h2>by {{ song.author }} from album {{ song.album }}</h2>
+    <pre>{{ song.lyric_text }}</pre>
+{% endblock %}
+    

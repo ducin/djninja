@@ -1,5 +1,7 @@
 import os.path
 
+PROJECT_DIR = os.path.dirname(__file__)
+
 # Django settings for djninja project.
 
 DEBUG = True
@@ -73,9 +75,7 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    # Put strings here, like "/home/html/static" or "C:/www/django/static".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    os.path.join(PROJECT_DIR, "static"),
 )
 
 # List of finder classes that know how to find static files in
@@ -111,7 +111,6 @@ ROOT_URLCONF = 'djninja.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'djninja.wsgi.application'
 
-PROJECT_DIR = os.path.dirname(__file__)
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, "templates")
 )

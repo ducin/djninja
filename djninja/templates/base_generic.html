@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Welcome to djninja!{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="Shortcut icon" href="{{ STATIC_URL }}img/favicon32.png" />
+
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/bootstrap-responsive.css">
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/lyricsBase.css">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/sortable.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap-transition.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap-alert.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap-dropdown.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap-scrollspy.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap-tab.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap-tooltip.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap-popover.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap-button.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap-collapse.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap-carousel.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap-typeahead.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/bootbox-3.2.0.js"></script>
+  </head>
+  <body>
+
+    <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper">
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+      <div class="container">
+
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+              {% block menu %}
+                {% include "menu.html" %}
+              {% endblock %}
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
+
+    {% block body %}
+    This is body content
+    {% endblock %}
+  </body>
+</html>
