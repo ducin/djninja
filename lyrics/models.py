@@ -9,7 +9,7 @@ class Lyric(models.Model):
     lyric_text = models.TextField()
     created_at = models.DateTimeField()
     def __unicode__(self):
-        return "\"" + self.title + "\" by " + self.author
+        return "\"" + self.song.title + "\": \"" + self.lyric_short(30) + "\""
     def lyric_short(self, length=100):
         return self.lyric_text[:length] + "..."
 

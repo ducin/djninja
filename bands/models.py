@@ -1,7 +1,7 @@
 from django.db import models
-#from django.db.models.base import ModelBase
 from django.core.exceptions import FieldError
 
+# http://charlesleifer.com/blog/writing-custom-field-django/
 class YearField(models.Field):
     def db_type(self, connection):
         if connection.settings_dict['ENGINE'] == 'django.db.backends.mysql':
