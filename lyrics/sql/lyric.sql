@@ -1,5 +1,5 @@
-INSERT INTO `lyric` (`id`, `genre_id`, `title`, `author`, `album`, `created_at`, `lyric_text`) VALUES
-(1, 6, 'Until it sleeps', 'Metallica', 'Load', '2013-02-17 00:00:00',
+INSERT INTO `lyric` (`id`, `song_id`, `created_at`, `lyric_text`) VALUES
+(1, 1, '2013-02-17 00:00:00',
 "Where do I take this pain of mine?
 I run, but it stays right by my side
 
@@ -53,7 +53,7 @@ And the hate still shapes me
 So hold me until it sleeps
 Until it sleeps"),
 
-(2, 6, 'Falling away from me', 'Korn', 'Issues', '2013-02-17 00:00:00',
+(2, 2, '2013-02-17 00:00:00',
 "Hey, I'm feeling tired
 My time, is gone today
 You flirt with suicide
@@ -112,7 +112,7 @@ Beating me, beating me
 Down, down
 Into the ground"),
 
-(3, 1, 'Give her the gun', 'Dio', 'Strange Highways', '2013-02-17 00:00:00',
+(3, 3, '2013-02-17 00:00:00',
 "She heard this song before
 Daddy's at the door
 Just to say I love you
@@ -165,7 +165,7 @@ Oh, give her the gun
 Before the next one comes along
 'Cause it goes round and round and round..."),
 
-(4, 1, 'Perfect Strangers', 'Deep Purple', 'Perfect Strangers', '2013-02-17 00:00:00',
+(4, 4, '2013-02-17 00:00:00',
 "Can you remember remember my name 
 As I flow through your life 
 A thousand oceans I have flown 
@@ -201,7 +201,7 @@ You've got to understand
 We must remain 
 Perfect Strangers"),
 
-(5, 7, 'This is Shangrila', 'Mother Love Bone', 'Apple', '2013-02-17 00:00:00',
+(5, 5, '2013-02-17 00:00:00',
 "Said, I've been around the world
 Wrote a million songs, it's all a bore to me
 I've slept in the gutter and I've lied with the dogs

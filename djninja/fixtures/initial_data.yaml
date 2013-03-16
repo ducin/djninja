@@ -1,0 +1,65 @@
+- model: bands.genre
+  pk: 1
+  fields:
+    name: Rock
+- model: bands.genre
+  pk: 2
+  fields:
+    name: Pop
+- model: bands.genre
+  pk: 3
+  fields:
+    name: Techno
+- model: bands.genre
+  pk: 4
+  fields:
+    name: Classic
+- model: bands.genre
+  pk: 5
+  fields:
+    name: Electro
+- model: bands.genre
+  pk: 6
+  fields:
+    name: Metal
+- model: bands.genre
+  pk: 7
+  fields:
+    name: Grunge
+
+- model: bands.Band
+  pk: 1
+  fields:
+    name: Metallica
+    active_since: ""
+    genres: [1,6]
+
+- model: bands.Album
+  pk: 1
+  fields:
+    band: 1
+    name: "Kill 'Em All"
+    released_at: '1983-07-25'
+- model: bands.Song
+  pk: 1
+  fields:
+    album: 1
+    title: "Hit the Lights"
+    duration: 257
+- model: bands.Song
+  pk: 2
+  fields:
+    album: 1
+    title: "The Four Horsemen"
+    duration: 437
+    
+"Motorbreath" (Hetfield) - 3:08
+"Jump in the Fire" (Hetfield, Ulrich, Mustaine) - 4:41
+"(Anesthesia) Pulling Teeth" (Cliff Burton) - 4:14
+"Whiplash" (Hetfield, Ulrich) - 4:09
+"Phantom Lord" (Hetfield, Ulrich, Mustaine) - 5:01
+"No Remorse" (Hetfield, Ulrich) - 6:26
+"Seek & Destroy" (Hetfield, Ulrich) - 6:55
+"Metal Militia" (Hetfield, Ulrich, Mustaine) - 5:11
+"Am I Evil?" (Brian Tatler, Sean Harris) - 7:50
+"Blitzkrieg" (Jim Sirotto, Ian Jones, Smith) - 3:36

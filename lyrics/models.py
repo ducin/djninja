@@ -1,24 +1,12 @@
 from django.db import models
-from django.db.models.base import ModelBase
-
-class Genre(models.Model):
-    """Music genre"""
-    class Meta:
-        db_table = 'genre'
-    name = models.CharField(max_length=64)
-    def __unicode__(self):
-        return self.name
+from bands.models import Genre, Song
 
 class Lyric(models.Model):
     """A music lyric"""
     class Meta:
-        unique_together = ['title', 'album']
         db_table = 'lyric'
-    genre = models.ForeignKey(Genre)
-    title = models.CharField(max_length=64)
+    song = models.ForeignKey(Song,unique=True)
     lyric_text = models.TextField()
-    author = models.CharField(max_length=64)
-    album = models.CharField(max_length=64)
     created_at = models.DateTimeField()
     def __unicode__(self):
         return "\"" + self.title + "\" by " + self.author
@@ -32,7 +20,7 @@ class LyricComment(models.Model):
     lyric = models.ForeignKey(Lyric)
     text = models.TextField()
     author = models.CharField(max_length=64)
-    ip = models.CharField(max_length=16)
+    ip = models.IPAddressField()
     created_at = models.DateTimeField()
     def __unicode__(self):
         return "\"" + self.text[:10] + "...\" by " + self.author

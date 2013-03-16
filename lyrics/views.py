@@ -25,13 +25,13 @@ def index(request):
     return render(request, 'lyrics/index.html', context)
 
 def jukebox(request):
-    songs = Lyric.objects.order_by('-created_at')[:5]
-    context = { 'songs': songs }
+    lyrics = Lyric.objects.order_by('-created_at')[:5]
+    context = { 'songs': lyrics }
     return render(request, 'lyrics/jukebox.html', context)
 
 def song(request, song_id):
-    song = get_object_or_404(Lyric, pk=song_id)
-    context = { 'song': song }
+    lyric = get_object_or_404(Lyric, pk=song_id)
+    context = { 'song': lyric }
     return render(request, 'lyrics/song.html', context)
 
 def static_about(request):

@@ -13,12 +13,12 @@ class LyricCommentAdmin(admin.ModelAdmin):
     list_display = ['author', 'text_short']
 
 class LyricAdmin(admin.ModelAdmin):
-    list_display = ['title', 'author', 'lyric_short']
+    list_display = ['song', 'lyric_short']
     list_filter = ['created_at']
     date_hierarchy = 'created_at'
-    search_fields = ['title', 'author']
+    search_fields = ['lyric_text']
     fieldsets = [
-        (None,      {'fields': ['genre', 'title', 'author', 'album', 'created_at']}),
+        (None,      {'fields': ['song', 'created_at']}),
         ('Content', {'fields': ['lyric_text'], 'classes': ['collapse']}),
     ]
     inlines = [LyricCommentInline]
