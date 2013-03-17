@@ -4,7 +4,12 @@
 
 {% block container %}
     <h1>{{ lyric.song.title }}</h1>
-    <h2>by {{ lyric.song.band }} from album "{{ lyric.song.album }}"</h2>
+    <h2>
+        by {{ lyric.song.band }}
+        {% if lyric.song.album %}
+            from album "{{ lyric.song.album }}"
+        {% endif %}
+    </h2>
     <pre>{{ lyric.lyric_text }}</pre>
 {% endblock %}
     
