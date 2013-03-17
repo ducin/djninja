@@ -6,7 +6,7 @@
     {% if songs %}
         <ul id="sortable">
         {% for lyric in songs %}
-            <li><a href="/lyrics/{{ lyric.id }}/">{{ lyric.title }}</a></li>
+            <li><a href="/lyrics/{{ lyric.id }}/">{{ lyric.song.title }}</a></li>
         {% endfor %}
         </ul>
     {% else %}
