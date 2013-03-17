@@ -3,8 +3,8 @@
 {% block title %}Djninja: {{ song.title }} by {{ song.author }}{% endblock %}
 
 {% block container %}
-    <h1>{{ song.title }}</h1>
-    <h2>by {{ song.author }} from album {{ song.album }}</h2>
-    <pre>{{ song.lyric_text }}</pre>
+    <h1>{{ lyric.song.title }}</h1>
+    <h2>by {{ lyric.song.band }} from album "{{ lyric.song.album }}"</h2>
+    <pre>{{ lyric.lyric_text }}</pre>
 {% endblock %}
     

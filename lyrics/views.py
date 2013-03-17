@@ -29,9 +29,9 @@ def jukebox(request):
     context = { 'songs': lyrics }
     return render(request, 'lyrics/jukebox.html', context)
 
-def song(request, song_id):
-    lyric = get_object_or_404(Lyric, pk=song_id)
-    context = { 'song': lyric }
+def lyric(request, lyric_id):
+    lyric = get_object_or_404(Lyric, pk=lyric_id)
+    context = { 'lyric': lyric }
     return render(request, 'lyrics/song.html', context)
 
 def static_about(request):
