@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from lyrics.models import Lyric
+from django.contrib import auth
 
 def index(request):
     context = { 'items': [
@@ -36,3 +37,19 @@ def lyric(request, lyric_id):
 
 def static_about(request):
     return render(request, 'lyrics/static_about.html', {})
+
+def login(request):
+    return render(request, 'lyrics/login.html', {})
+
+def login_process(request):
+    username = request.POST['username']
+    password = request.POST['password']
+    user = auth.authenticate(username=username, password=password)
+    if user is not None:
+        if user.is_active:
+            auth.login(request, user)
+            return redirect('index')
+        else:
+            return redirect('index', {'msg': 'disabled account'})
+    else:
+        return redirect('index', {'msg': 'invalid login'})
