@@ -18,7 +18,7 @@ body {
                             <div class="carousel-caption">
                                 <h1>{{ article.title }}</h1>
                                 <p class="lead">{{ article.headline }}</p>
-                                <a class="btn btn-large btn-primary" href="#">Read more</a>
+                                <a class="btn btn-large btn-primary" href="{% url "detail" article.id %}">Read more »</a>
                             </div>
                         </div>
                     </div>

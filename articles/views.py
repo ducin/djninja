@@ -1,11 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from articles.models import Article
 
 def slider(request):
     context = { 'articles': Article.objects.order_by('-created_at')[:5] }
     return render(request, 'articles/slider.html', context)
 
-def archive(request, page=1):
+def archive(request, page="1"):
     context = { 'articles': Article.objects.order_by('-created_at')[:5] }
     return render(request, 'articles/archive.html', context)
 

@@ -1,0 +1,11 @@
+{% extends "container.html" %}
+
+{% block title %}Djninja: {{ article.title }}{% endblock %}
+
+{% block container %}
+<h1>{{ article.title }}</h1>
+
+{{ article.content|safe }}
+<i>published on {{ article.created_at }}</i>
+back to <a href="{% url "archive" %}">articles archive</a>
+{% endblock %}
