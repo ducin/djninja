@@ -11,4 +11,4 @@ class Article(models.Model):
     active = models.BooleanField()
     created_at = models.DateTimeField()
     def __unicode__(self):
-        return self.name
+        return self.title
