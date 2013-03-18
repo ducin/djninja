@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from lyrics.models import Lyric
+from articles.models import Article
 from django.contrib import auth
 
 def index(request):
@@ -23,6 +24,7 @@ def index(request):
             'button': 'Browse gallery',
         },
     ]}
+    context = { 'items': Article.objects.order_by('-created_at')[:5] }
     return render(request, 'lyrics/index.html', context)
 
 def jukebox(request):
