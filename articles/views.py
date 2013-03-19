@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, render_to_response
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from articles.models import Article
-from django.template import Context
+from django.template import Context, RequestContext
 
 def slider(request):
     context = Context ({ 'articles': Article.objects.order_by('-created_at')[:5] })
@@ -23,4 +23,4 @@ def archive(request, page="1"):
     context = Context({
         'articles': articles
     })
-    return render_to_response('articles/archive.html', context)
+    return render_to_response('articles/archive.html', context, context_instance=RequestContext(request))
