@@ -8,7 +8,7 @@ class Article(models.Model):
     title = models.CharField(max_length=64)
     headline = models.CharField(max_length=255)
     content = HTMLField()
-    image = models.ImageField(upload_to = 'articles/', null=True, blank=True)
+    image = models.ImageField(upload_to = 'articles', null=True, blank=True)
     active = models.BooleanField()
     created_at = models.DateTimeField()
     def __unicode__(self):

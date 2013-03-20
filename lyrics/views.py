@@ -18,6 +18,7 @@ def static_about(request):
 def login(request):
     return render(request, 'lyrics/login.html', {})
 
+# this is not used now
 def login_process(request):
     username = request.POST['username']
     password = request.POST['password']

@@ -13,7 +13,7 @@ body {
             <div class="carousel-inner">
                 {% for article in articles %}
                     <div class="item{% if forloop.counter == 1 %} active{% endif %}">
-                        <img src="{{ STATIC_URL }}img/{{ article.image }}" alt="" />
+                        <img src="{{ article.image.url }}" alt="" />
                         <div class="container">
                             <div class="carousel-caption">
                                 <h1>{{ article.title }}</h1>
