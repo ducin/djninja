@@ -126,6 +126,7 @@ INSTALLED_APPS = (
     'bands',
     'lyrics',
     'articles',
+    'tinymce',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
