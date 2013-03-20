@@ -13,7 +13,7 @@ def detail(request, article_id):
 
 def archive(request, page="1"):
     articles_list = Article.objects.all().filter(active=True)
-    paginator = Paginator(articles_list, 6)
+    paginator = Paginator(articles_list, 3)
     try:
         articles = paginator.page(page)
     except PageNotAnInteger:

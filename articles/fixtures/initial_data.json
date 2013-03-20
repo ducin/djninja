@@ -34,5 +34,41 @@
       "active": 1,
       "created_at": "2013-03-18T13:19:37+00:00"
     }
+  },
+  {
+    "model": "articles.article",
+    "pk": 4,
+    "fields": {
+      "title": "Celebration Day Premieres In Four Countries Announced",
+      "headline": "Film To Debut At Ziegfeld Theater In New York On October 9",
+      "content": "<p>Premieres In Berlin And Tokyo Also Scheduled In Advance Of Global Theatrical Release On October 17</p><p>Led Zeppelin have announced upcoming premieres in four countries for Celebration Day, which documents the band’s 2007 concert at London’s O2 Arena.</p><p>The film will make its U.S. debut at the historic Ziegfeld Theater in New York’s theater district on October 9. Prior to the premiere, founding members John Paul Jones, Jimmy Page, and Robert Plant will be joined by Jason Bonham, the son of their late drummer John Bonham, for a press conference at New York’s Museum of Modern Art.</p><p>Celebration Day will then have its U.K. premiere at London’s legendary Hammersmith Apollo on October 12. Jones, Page, and Plant will also be attendance for this special event and a limited number of tickets will be made available to fans for £20.</p><p>Premieres for the film will follow in Berlin on October 15, where Jones is confirmed to attend, and Tokyo on October 16, which will have Page in attendance.</p>",
+      "image": "examples/slide-04.jpg",
+      "active": 1,
+      "created_at": "2013-01-14T11:37:59+00:00"
+    }
+  },
+  {
+    "model": "articles.article",
+    "pk": 5,
+    "fields": {
+      "title": "Waging heavy innovation",
+      "headline": "I am succeeding because people are talking about how they would do it better.",
+      "content": "<p>Innovation is not for the faint of heart, nor for those who lack the capacity for joy. Leading an innovation culture means living inside of chaos, while maintaining a focus on cardinal points; operating within demanding goals and financial requirements while remaining open to diverse and contradictory points of view; sometimes \"losing your way to find your way.\" Above all else, though, authentic leadership is about experiencing and celebrating the joy of innovation. And if you are looking for a good role model -- someone who best exemplifies all the traits of innovation leadership -- you need look no further than Neil Young.</p><p>There are countless books, monographs, studies, articles and blogs addressing the issues of leadership and innovation, and more coming every day. But Neil Young's recently released autobiography, Waging Heavy Peace, may serve as the best innovation case study out there. For those who study the \"how\" of innovation, and in particular the often mysterious challenge of leading innovation, Young's life story captures it all in one compelling read.</p><p>Throughout his long and storied career, Neil Young has been a virtual factory of songs, musical innovation, ideas, inventions and a near-constant stream of new product. Lest we miss the obvious, his life and work would fit the most stringent definition of a successful business: consistent revenue generation; consistent innovative product releases; nurturing of intellectual and human capital; a strong, well-maintained brand. And at the core of this lifetime of business success are two critical innovation principles consistently applied, day in and day out, in real time, in the real world.</p>",
+      "image": "examples/slide-05.jpg",
+      "active": 1,
+      "created_at": "2013-01-14T11:37:59+00:00"
+    }
+  },
+  {
+    "model": "articles.article",
+    "pk": 6,
+    "fields": {
+      "title": "Rush to play festival D'Ete, Quebec City",
+      "headline": "They’ll be playing the Bell Stage on the Plains of Abraham in what will be their only show in Québec",
+      "content": "<p>Quebec City, March 15, 2013 – With a new critically-acclaimed album out, Rush is bringing their epic Clockwork Angels Tour to the Festival on July 10. They’ll be playing the Bell Stage on the Plains of Abraham in what will be their only show in Québec. And what a show ─ this will be a huge production with projections, special effects and even the Clockwork Angels String Ensemble to add a complex layer of sound to both their new work and their rich repertoire.</p><p>Remembering the enthusiastic Festival crowds in 2010, Geddy Lee, Neil Peart and Alex Lifeson are excited to be back. “We know that Rush will blow our many rock fans away. And because this is their only stop in the province, we expect people to be coming in from all over to see these three world-famous rock stars who are still going strong after almost 40 years”, program director Louis Bellavance was proud to say.</p><p>Band of the Year and Album of the Year winners at the 2012 Classic Rock Awards in London, Rush will soon be inducted into the Rock and Roll Hall of Fame.</p><p>75,000 passes for the Festival d’été de Québec will go on sale Saturday, March 16 at infofestival.com.</p>",
+      "image": "examples/slide-06.jpg",
+      "active": 0,
+      "created_at": "2013-01-14T11:37:59+00:00"
+    }
   }
 ]
