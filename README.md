@@ -16,4 +16,4 @@ ci
 
 The project is continuously integrated with Travis-CI:
 
-[![Build Status](https://travis-ci.org/tkoomzaaskz/djninja.png?branch=master)](https://travis-ci.org/tkoomzaaskz/djninja)
+[![Build Status](https://travis-ci.org/ducin/djninja.png?branch=master)](https://travis-ci.org/ducin/djninja)
